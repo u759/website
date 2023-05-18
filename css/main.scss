@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+::selection {
+    background: rgba(0, 195, 255, 0.432);
+    color: rgb(0, 0, 0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(5%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*::-webkit-scrollbar {
+    display: none;
+}*/
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.48em;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', arial;
+    background-color: #191919;
+    color: lightgray;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 4em 2em;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2em;
+        transition: 0.5s;
+    }
+
+    .portfolioboxtitle {
+        text-align: center;
+        transform: translateY(-7em);
+        font-weight: 500;
+        pointer-events: none;
+        opacity: 0;
+        transition: .5s;
+        color: white;
+    }
+
+    :hover .portfolioboxtitle {
+        opacity: 1;
+    }
+
+    
+    .portfolioboxes{
+        line-height: 1em;
+    }
+
+}
+
+.grid>div {
+    height: 250px;
+    background: rgb(66, 66, 66);
+    border-radius: 2em;
+
+    :hover {
+        filter: brightness(80%);
+        transition: 0.5s;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.nav-container {
+    a {
+        color: rgb(255, 255, 255);
+    }
+
+    z-index: 9999;
+    position: fixed;
+}
+
+.social-header {
+    display: none;
+
+    a {
+        display: block;
+        padding: 0 1em;
+    }
+}
+
+.nav-bar {
+    filter: brightness(80%);
+    backdrop-filter: blur(10px);
+    overflow: auto;
+    width: 100%;
+    height: 5.5em;
+    display: flex;
+    justify-content: left;
+    position: fixed;
+    z-index: 9999;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    padding: 2em;
+
+    .logo {
+        color: white;
+        font-weight: bold;
+        padding: 0 1em;
+        margin-right: 1em;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+
+}
+
+
+.hero {
+    background-image: url(/images/hero.webp), url(/CLC/images/hero.webp);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .desktophero {
+        display: none;
+    }
+
+    .herosquare {
+        display: none;
+    }
+
+    .content {
+        color: white;
+        display: grid;
+        text-align: center;
+        font-size: 25px;
+        transform: translateY(30vh);
+
+        .meet {
+            line-height: 20%;
+        }
+    }
+}
+
+.about {
+    background-image: url(/images/backgroundsvgs/heroblob.svg), url(/CLC/images/backgroundsvgs/heroblob.svg);
+    background-size: cover;
+
+    .aboutsection {
+        padding: 4em 2em;
+    }
+
+    .abouttitle {
+        font-size: 60px;
+        margin-left: 1.15em;
+        transform: translateY(1.5em);
+    }
+
+    .text {
+        text-align: center;
+        padding: 4em 2em;
+    }
+
+    .aboutsquare {
+        position: absolute;
+        float: left;
+        width: 325px;
+    }
+
+    .right {
+        border-radius: 30px;
+        margin-top: 2em;
+    }
+}
+
+.skills {
+    padding: 4em 2em;
+    color: #2E2E2E;
+    background: rgb(149, 207, 213);
+    background-image: url(/images/square2.svg), url(/CLC/images/square2.svg);
+    background-position: 48px 45px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+
+    .skillstitle {
+        font-size: 60px;
+        line-height: 125%;
+    }
+
+    .skills-container {
+        font-weight: bold;
+
+        .skillsgauge {
+            font-size: 4.5vw;
+
+            svg {
+                height: 100%;
+                width: 100%
+            }
+        }
+    }
+
+    .hobbies-container {
+        padding-top: 5em;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 4.5vw;
+
+        ul {
+            columns: 2;
+        }
+
+        .hobbiessquare {
+            transform: translateY(-2.9em);
+            pointer-events: none;
+        }
+    }
+
+}
+
+.portfolio {
+
+    transform: translateY(60px);
+
+    .portfoliotitle {
+        font-size: 60px;
+        margin-left: 1.15em;
+        transform: translateY(1.2em);
+    }
+
+    .fadedportfoliotitle {
+        font-size: 60px;
+        color: #FFBDA2;
+        opacity: 50%;
+        margin-left: 1.3em;
+    }
+
+    .portfoliobg {
+        position: absolute;
+        width: 320px;
+    }
+
+    .portfolio-container {
+        transform: translateY(-10vw);
+        text-align: center;
+        padding: 4em 2em;
+    }
+
+    .category {
+        color: #FFBDA2;
+        line-height: 50%;
+        font-size: 4.5vw;
+    }
+
+    .portfolioname {
+        font-size: 7vw;
+        line-height: 50%;
+    }
+
+    .subtitle {
+        padding-bottom: 1em;
+    }
+
+    .portfolio1image {
+        border-radius: 2em;
+        overflow: hidden;
+    }
+
+    .portfolio2image {
+        border-radius: 2em;
+        overflow: hidden;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    .about .left {
+        text-align: left;
+    }
+
+    .portfolio {
+
+        .portfoliotitle {
+            font-size: 4vw;
+        }
+
+        .fadedportfoliotitle {
+            font-size: 4vw;
+        }
+
+        background-size: 22vw;
+
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+        .portfolioboxtitle {
+            transform: translateY(-7.5em);
+            font-size: 2em;
+            font-weight: 500;
+        }
+    }
+
+    .grid>div {
+        height: 350px;
+        background: rgb(66, 66, 66);
+        border-radius: 2em;
+    }
+
+    .portfolio .portfolio-container {
+        padding: 4em 4em;
+        text-align: left;
+        transform: translateY(-5em);
+        align-items: left;
+        justify-content: left;
+        width: 100%;
+
+        .category {
+            font-size: 2vw;
+            line-height: 0%;
+        }
+
+        .portfolioname {
+            font-size: 3vw;
+            line-height: 120%;
+        }
+
+        .subtitle {
+            font-size: 1.3vw;
+        }
+
+        .portfolio1image {
+            display: grid;
+            place-content: center;
+            right: -10vw;
+            position: relative;
+        }
+
+        .portfolio2image {
+            display: grid;
+            place-content: center;
+            right: -10vw;
+            position: relative;
+        }
+
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    .portfolio .portfoliobg {
+        width: 22vw;
+    }
+
+    .about .aboutsection {
+        padding: 4em 4em;
+        text-align: left;
+        align-items: left;
+        justify-content: left;
+        margin-bottom: 4em;
+        display: grid;
+        grid-template-columns: 50% auto;
+
+        .right {
+            display: grid;
+            place-content: center;
+            transform: translateY(-5em);
+            scale: 120%;
+            position: relative;
+            right: -12vw;
+            z-index: 999;
+        }
+
+        .text {
+            transform: translateY(-5vw);
+            text-align: left;
+            font-size: 1.3vw;
+            line-height: 200%;
+            display: grid;
+            place-content: center;
+        }
+
+        background-size: 32vw;
+
+    }
+
+    .about {
+        height: 52vw;
+
+        .abouttitle {
+            font-size: 4vw;
+        }
+
+        .aboutsquare {
+            width: 22vw;
+        }
+
+    }
+
+    .skills {
+        background-size: 28vw;
+        position: relative;
+        height: 45vw;
+
+        .skillstitle {
+            font-size: 4vw;
+        }
+
+        display: grid;
+        grid-template-columns: 50% AUTO;
+
+        .skills-container {
+            .skillsgauge {
+                font-size: 2vw;
+            }
+
+        }
+
+        .hobbies-container {
+            font-size: 2.5vw;
+            width: 90vw;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            ul {
+                columns: 4;
+            }
+
+            .hobbiessquare {
+                transform: translateY(-2.7em);
+            }
+        }
+    }
+
+    .hero {
+
+        .mobilehero {
+            display: none;
+        }
+
+        .desktophero {
+            display: initial;
+        }
+
+        .content {
+            text-align: left;
+            padding-left: 2em;
+            font-size: 2.5vw;
+            position: absolute;
+
+            .meet {
+                font-size: 2vw;
+                line-height: 0%;
+            }
+        }
+
+        .herosquare {
+            display: initial;
+            position: absolute;
+            max-width: 50vw;
+            right: 4em;
+            top: 20vh;
+            position: absolute;
+            animation-name: herofloat;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes herofloat {
+            0% {
+                transform: translateY(0em);
+            }
+
+            50% {
+                transform: translateY(-2em);
+            }
+
+            100% {
+                transform: translateY(0em);
+            }
+        }
+
+    }
+
+    .social-header {
+        display: block;
+        position: fixed;
+        columns: 3;
+        z-index: 9999;
+        filter: invert(100%);
+        scale: 60%;
+        transform: translateY(1.85em);
+        right: 1em;
+    }
+
+
+}
