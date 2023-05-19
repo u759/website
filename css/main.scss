@@ -155,7 +155,7 @@ header {
 
 
 .hero {
-    background-image: url(/images/hero.webp), url(/CLC/images/hero.webp);
+    background-image: url(/images/hero.webp);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -184,7 +184,7 @@ header {
 }
 
 .about {
-    background-image: url(/images/backgroundsvgs/heroblob.svg), url(/CLC/images/backgroundsvgs/heroblob.svg);
+    background-image: url(/images/backgroundsvgs/heroblob.svg);
     background-size: cover;
 
     .aboutsection {
@@ -218,7 +218,7 @@ header {
     padding: 4em 2em;
     color: #2E2E2E;
     background: rgb(149, 207, 213);
-    background-image: url(/images/backgroundsvgs/square2.svg), url(/CLC/images/backgroundsvgs/square2.svg);
+    background-image: url(/images/backgroundsvgs/square2.svg);
     background-position: 48px 45px;
     background-size: 400px;
     background-repeat: no-repeat;
