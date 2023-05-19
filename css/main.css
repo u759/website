@@ -53,7 +53,7 @@ body {
 .grid .portfolioboxtitle {
   text-align: center;
   transform: translateY(-7em);
-  font-weight: 500;
+  font-weight: 1000;
   pointer-events: none;
   opacity: 0;
   transition: 0.5s;
@@ -62,8 +62,12 @@ body {
 .grid :hover .portfolioboxtitle {
   opacity: 1;
 }
+.grid :hover img {
+  transform: scale(103%);
+}
 .grid .portfolioboxes {
   line-height: 1em;
+  overflow: hidden;
 }
 
 .grid > div {
@@ -193,7 +197,7 @@ header ul a {
   padding: 4em 2em;
   color: #2E2E2E;
   background: rgb(149, 207, 213);
-  background-image: url(/images/square2.svg), url(/CLC/images/square2.svg);
+  background-image: url(/images/backgroundsvgs/square2.svg), url(/CLC/images/backgroundsvgs/square2.svg);
   background-position: 48px 45px;
   background-size: 400px;
   background-repeat: no-repeat;
@@ -291,7 +295,7 @@ header ul a {
   .grid .portfolioboxtitle {
     transform: translateY(-7.5em);
     font-size: 2em;
-    font-weight: 500;
+    font-weight: 600;
   }
   .grid > div {
     height: 350px;
