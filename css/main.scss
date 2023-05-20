@@ -62,14 +62,18 @@ body {
         opacity: 1;
     }
 
-    :hover img{
+    :hover img {
         transform: scale(103%);
     }
 
-    
-    .portfolioboxes{
+
+    .portfolioboxes {
         line-height: 1em;
         overflow: hidden;
+    }
+
+    img[data-src] {
+        opacity: 0;
     }
 
 }
