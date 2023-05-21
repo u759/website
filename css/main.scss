@@ -2,8 +2,13 @@
 
 ::selection {
     background: rgba(0, 195, 255, 0.432);
-    color: rgb(0, 0, 0);
+    //color: rgb(0, 0, 0);
 }
+
+:root {
+    --orange: #FFBDA2;
+    --blue: #95CFD5;
+  }
 
 .hidden {
     opacity: 0;
@@ -34,14 +39,14 @@ body {
     color: lightgray;
 }
 
-.grid {
+.grid,
+.grid2 {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 4em 2em;
 
     img {
-        width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 2em;
@@ -58,7 +63,35 @@ body {
         color: white;
     }
 
+    .experienceboxtitle {
+        text-align: center;
+        transform: translateY(-10em);
+        font-weight: 1000;
+        pointer-events: none;
+        opacity: 0;
+        transition: .5s;
+        color: var(--orange);
+    }
+
+    .experienceboxtext {
+        text-align: center;
+        transform: translateY(-10em);
+        font-weight: 500;
+        pointer-events: none;
+        opacity: 0;
+        transition: .5s;
+        color: white;
+    }
+
     :hover .portfolioboxtitle {
+        opacity: 1;
+    }
+
+    :hover .experienceboxtext {
+        opacity: 1;
+    }
+
+    :hover .experienceboxtitle {
         opacity: 1;
     }
 
@@ -89,6 +122,44 @@ body {
     }
 }
 
+.grid2>div {
+    height: 250px;
+    background: rgb(66, 66, 66);
+    border-radius: 2em;
+
+    :hover {
+        filter: brightness(20%);
+        transition: 0.5s;
+    }
+}
+
+.experience{
+    
+}
+
+.transpire {
+    display: none;
+    position: absolute;
+    left: 35vw;
+    width: 60vw;
+    transform: translateY(-8vw);
+}
+
+.centertitledesktop {
+    text-align: center;
+    transform: translateY(1.5em);
+    color: var(--orange);
+    opacity: 0;
+    font-size: 4vw;
+}
+
+.centertitlemobile {
+    text-align: center;
+    transform: translateY(1em);
+    color: var(--orange);
+    font-size: 6vw;
+}
+
 
 ul {
     list-style-type: none;
@@ -111,6 +182,10 @@ img {
 
     z-index: 9999;
     position: fixed;
+
+    .navwide {
+        display: none;
+    }
 }
 
 .social-header {
@@ -156,7 +231,6 @@ header {
     }
 
 }
-
 
 .hero {
     background-image: url(/images/hero.webp);
@@ -272,11 +346,12 @@ header {
         font-size: 60px;
         margin-left: 1.15em;
         transform: translateY(1.2em);
+
     }
 
     .fadedportfoliotitle {
         font-size: 60px;
-        color: #FFBDA2;
+        color: var(--orange);
         opacity: 50%;
         margin-left: 1.3em;
     }
@@ -293,14 +368,14 @@ header {
     }
 
     .category {
-        color: #FFBDA2;
+        color: var(--orange);
         line-height: 50%;
         font-size: 4.5vw;
     }
 
     .portfolioname {
         font-size: 7vw;
-        line-height: 50%;
+        line-height: 120%;
     }
 
     .subtitle {
@@ -317,9 +392,23 @@ header {
         overflow: hidden;
     }
 
+    .portfoliotypingarea {
+        display: none;
+        position: absolute;
+        transform: translateY(-19vw);
+        left: 30vw;
+        font-size: 2.5vw;
+        opacity: 0.25;
+        padding-right: 2em;
+    }
+
 }
 
 @media only screen and (min-width: 800px) {
+
+    .nav-container .navwide {
+        display: initial;
+    }
 
     .about .left {
         text-align: left;
@@ -335,11 +424,16 @@ header {
             font-size: 4vw;
         }
 
+        .portfoliotypingarea {
+            display: initial;
+        }
+
         background-size: 22vw;
 
     }
 
-    .grid {
+    .grid,
+    .grid2 {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
         .portfolioboxtitle {
@@ -347,12 +441,42 @@ header {
             font-size: 2em;
             font-weight: 600;
         }
+
+        .experienceboxtitle {
+            transform: translateY(-10.5em);
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .experienceboxtext {
+            transform: translateY(-9.5em);
+            font-size: 2em;
+            font-weight: 500;
+        }
     }
 
     .grid>div {
         height: 350px;
         background: rgb(66, 66, 66);
         border-radius: 2em;
+    }
+
+    .grid2>div {
+        height: 350px;
+        background: rgb(66, 66, 66);
+        border-radius: 2em;
+    }
+
+    .transpire {
+        display: initial;
+    }
+
+    .centertitledesktop {
+        opacity: 1;
+    }
+
+    .centertitlemobile {
+        display: none;
     }
 
     .portfolio .portfolio-container {

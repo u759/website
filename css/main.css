@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 ::-moz-selection {
   background: rgba(0, 195, 255, 0.432);
-  color: rgb(0, 0, 0);
 }
 ::selection {
   background: rgba(0, 195, 255, 0.432);
-  color: rgb(0, 0, 0);
+}
+
+:root {
+  --orange: #FFBDA2;
+  --blue: #95CFD5;
 }
 
 .hidden {
@@ -36,21 +39,23 @@ body {
   color: lightgray;
 }
 
-.grid {
+.grid,
+.grid2 {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 4em 2em;
 }
-.grid img {
-  width: 100%;
+.grid img,
+.grid2 img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2em;
   transition: 0.5s;
 }
-.grid .portfolioboxtitle {
+.grid .portfolioboxtitle,
+.grid2 .portfolioboxtitle {
   text-align: center;
   transform: translateY(-7em);
   font-weight: 1000;
@@ -59,17 +64,49 @@ body {
   transition: 0.5s;
   color: white;
 }
-.grid :hover .portfolioboxtitle {
+.grid .experienceboxtitle,
+.grid2 .experienceboxtitle {
+  text-align: center;
+  transform: translateY(-10em);
+  font-weight: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+  color: var(--orange);
+}
+.grid .experienceboxtext,
+.grid2 .experienceboxtext {
+  text-align: center;
+  transform: translateY(-10em);
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+  color: white;
+}
+.grid :hover .portfolioboxtitle,
+.grid2 :hover .portfolioboxtitle {
   opacity: 1;
 }
-.grid :hover img {
+.grid :hover .experienceboxtext,
+.grid2 :hover .experienceboxtext {
+  opacity: 1;
+}
+.grid :hover .experienceboxtitle,
+.grid2 :hover .experienceboxtitle {
+  opacity: 1;
+}
+.grid :hover img,
+.grid2 :hover img {
   transform: scale(103%);
 }
-.grid .portfolioboxes {
+.grid .portfolioboxes,
+.grid2 .portfolioboxes {
   line-height: 1em;
   overflow: hidden;
 }
-.grid img[data-src] {
+.grid img[data-src],
+.grid2 img[data-src] {
   opacity: 0;
 }
 
@@ -81,6 +118,39 @@ body {
 .grid > div :hover {
   filter: brightness(80%);
   transition: 0.5s;
+}
+
+.grid2 > div {
+  height: 250px;
+  background: rgb(66, 66, 66);
+  border-radius: 2em;
+}
+.grid2 > div :hover {
+  filter: brightness(20%);
+  transition: 0.5s;
+}
+
+.transpire {
+  display: none;
+  position: absolute;
+  left: 35vw;
+  width: 60vw;
+  transform: translateY(-8vw);
+}
+
+.centertitledesktop {
+  text-align: center;
+  transform: translateY(1.5em);
+  color: var(--orange);
+  opacity: 0;
+  font-size: 4vw;
+}
+
+.centertitlemobile {
+  text-align: center;
+  transform: translateY(1em);
+  color: var(--orange);
+  font-size: 6vw;
 }
 
 ul {
@@ -103,6 +173,9 @@ img {
 }
 .nav-container a {
   color: rgb(255, 255, 255);
+}
+.nav-container .navwide {
+  display: none;
 }
 
 .social-header {
@@ -245,7 +318,7 @@ header ul a {
 }
 .portfolio .fadedportfoliotitle {
   font-size: 60px;
-  color: #FFBDA2;
+  color: var(--orange);
   opacity: 50%;
   margin-left: 1.3em;
 }
@@ -259,13 +332,13 @@ header ul a {
   padding: 4em 2em;
 }
 .portfolio .category {
-  color: #FFBDA2;
+  color: var(--orange);
   line-height: 50%;
   font-size: 4.5vw;
 }
 .portfolio .portfolioname {
   font-size: 7vw;
-  line-height: 50%;
+  line-height: 120%;
 }
 .portfolio .subtitle {
   padding-bottom: 1em;
@@ -278,8 +351,20 @@ header ul a {
   border-radius: 2em;
   overflow: hidden;
 }
+.portfolio .portfoliotypingarea {
+  display: none;
+  position: absolute;
+  transform: translateY(-19vw);
+  left: 30vw;
+  font-size: 2.5vw;
+  opacity: 0.25;
+  padding-right: 2em;
+}
 
 @media only screen and (min-width: 800px) {
+  .nav-container .navwide {
+    display: initial;
+  }
   .about .left {
     text-align: left;
   }
@@ -292,18 +377,49 @@ header ul a {
   .portfolio .fadedportfoliotitle {
     font-size: 4vw;
   }
-  .grid {
+  .portfolio .portfoliotypingarea {
+    display: initial;
+  }
+  .grid,
+  .grid2 {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
-  .grid .portfolioboxtitle {
+  .grid .portfolioboxtitle,
+  .grid2 .portfolioboxtitle {
     transform: translateY(-7.5em);
     font-size: 2em;
     font-weight: 600;
+  }
+  .grid .experienceboxtitle,
+  .grid2 .experienceboxtitle {
+    transform: translateY(-10.5em);
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .grid .experienceboxtext,
+  .grid2 .experienceboxtext {
+    transform: translateY(-9.5em);
+    font-size: 2em;
+    font-weight: 500;
   }
   .grid > div {
     height: 350px;
     background: rgb(66, 66, 66);
     border-radius: 2em;
+  }
+  .grid2 > div {
+    height: 350px;
+    background: rgb(66, 66, 66);
+    border-radius: 2em;
+  }
+  .transpire {
+    display: initial;
+  }
+  .centertitledesktop {
+    opacity: 1;
+  }
+  .centertitlemobile {
+    display: none;
   }
   .portfolio .portfolio-container {
     padding: 4em 4em;

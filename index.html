@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayden Nguyen</title>
-    <link rel="stylesheet" href="css/main.css">  
-    <script defer src="index.js"></script>   
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,9 @@
                 <ul>
                     <li><a href="/#about">about</a></li>
                     <li><a href="/#skills">skills</a></li>
-                    <li><a href="/#portfolio">projects</a></li>
+                    <li><a href="/#portfolio">portfolio</a></li>
+                    <li class="navwide"><a href="/#experience">experience</a></li>
+                    <li class="navwide"><a href="/#notables">notables</a></li>
                 </ul>
             </nav>
         </header>
@@ -45,7 +48,6 @@
         </div>
         <div class="herosquare hidden"><img src="images/svgs/herosquare.svg"></div>
     </div>
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".typing", {
             strings: ["Welcome to my CLC project!", "I'm a Photographer", "I'm an aspiring engineer", "I'm probably procrastinating"],
@@ -121,65 +123,113 @@
         <div class="portfoliobg"><img src="images/backgroundsvgs/square1.svg"></div>
         <h1 class="portfoliotitle">port<span style="color:#FFBDA2;">folio</span></h1>
         <h1 class="fadedportfoliotitle">est. 2005</h1>
+        <p class="portfoliotypingarea"><span class="portfoliotyping"></span></p>
+        <script>
+            var typed = new Typed(".portfoliotyping", {
+                strings: ["<i>I would sneak out at night to snap photos of the night sky, relinquishing to the persistence of nature and its enduring beauty.", "<i>A second later, the tiny display paints an azure portrait of the landscape, dotted with lonely homes and specks of stars breaking through the dusk."],
+                typeSpeed: 20,
+                backDelay: 7000,
+                fadeOut: true,
+                fadeOutClass: 'typed-fade-out',
+                fadeOutDelay: 500,
+                loop: true,
+                loopCount: Infinity,
+            })
+
+        </script>
         <div class="grid">
-            <div class="portfolioboxes"><a href="portfolio1.html" class="transition-link"><img src="images/portfolio/ha.webp" loading="lazy"></a>
+            <div class="portfolioboxes"><a href="portfolio1.html"><img src="images/portfolio/ha.webp"
+                        loading="lazy"></a>
                 <h1 class="portfolioboxtitle">Home Assistant</h1>
                 <h2 class="portfolioboxtitle" style="color:#FFBDA2">learn more</h2>
             </div>
-            <div class="portfolioboxes"><a href="portfolio2.html"><img src="images/portfolio/speaker.webp" loading="lazy"></a>
+            <div class="portfolioboxes"><a href="portfolio2.html"><img src="images/portfolio/speaker.webp"
+                        loading="lazy"></a>
                 <h1 class="portfolioboxtitle">Bluetooth Speaker</h1>
                 <h2 class="portfolioboxtitle" style="color:#FFBDA2">learn more</h2>
             </div>
-            <div class="portfolioboxes"><a href="portfolio3.html"><img src="images/portfolio/waves.webp" loading="lazy"></a>
+            <div class="portfolioboxes"><a href="portfolio3.html"><img src="images/portfolio/waves.webp"
+                        loading="lazy"></a>
                 <h1 class="portfolioboxtitle">Photography</h1>
                 <h2 class="portfolioboxtitle" style="color:#FFBDA2">learn more</h2>
             </div>
-            <div></div>
+            <div class="portfolioboxes"><a href="portfolio4.html"><img src="images/portfolio/java.png"
+                        loading="lazy"></a>
+                <h1 class="portfolioboxtitle">Java NS Sim</h1>
+                <h2 class="portfolioboxtitle" style="color:#FFBDA2">learn more</h2>
+            </div>
         </div>
     </section>
 
-    <section class="portfolio hidden" id="portfolio">
+    <section class="portfolio hidden experience" id="experience">
+        <div class="portfoliobg"><img src="images/backgroundsvgs/square2.svg"></div>
+        <h1 class="portfoliotitle"><span style="color:var(--orange);">experience</span></h1>
+        <div class="transpire"><img src="images/svgs/transpire.svg"></div>
+        <h1 class="centertitledesktop">hover for more</h1>
+        <h1 class="centertitlemobile">tap for more</h1>
+        <div class="grid2">
+            <div class="portfolioboxes"><img src="images/experience/759.jpg" loading="lazy">
+                <h2 class="experienceboxtitle">Air Cadets</h2>
+                <h2 class="experienceboxtext">Squadron Commander,</h2>
+                <h2 class="experienceboxtext">759 Falcon RCACS</h2><br>
+                <h2 class="experienceboxtext">Oct 2018 - present</h2>
+            </div>
+            <div class="portfolioboxes"><img src="images/experience/freegeek.png" loading="lazy">
+                <h2 class="experienceboxtitle">Electronics/Computers</h2>
+                <h2 class="experienceboxtext">Computer Builder,</h2>
+                <h2 class="experienceboxtext">Free Geek Vancouver</h2><br>
+                <h2 class="experienceboxtext">Oct 2021 - June 2022</h2>
+            </div>
+            <div class="portfolioboxes"><img src="images/experience/rcm.jpg" loading="lazy">
+                <h2 class="experienceboxtitle">Musical Performance</h2>
+                <h2 class="experienceboxtext">Level 10 Piano,</h2>
+                <h2 class="experienceboxtext">Royal Conservatory</h2>
+                <h2 class="experienceboxtext">of Music</h2><br>
+                <h2 class="experienceboxtext">Sept 2010 - June 2021</h2>
+            </div>
+            <div class="portfolioboxes"><img src="images/experience/cfc.png" loading="lazy">
+                <h2 class="experienceboxtitle">Private Pilot</h2>
+                <h2 class="experienceboxtext">PPL VFR,</h2>
+                <h2 class="experienceboxtext">Canadian Flight Centre</h2><br>
+                <h2 class="experienceboxtext">Jul - Aug 2022</h2>
+            </div>
+            <div class="portfolioboxes"><img src="images/experience/shoppers.jpg" loading="lazy">
+                <h2 class="experienceboxtitle">Retail</h2>
+                <h2 class="experienceboxtext">Merchandiser,</h2>
+                <h2 class="experienceboxtext">Shoppers Drug Mart</h2><br>
+                <h2 class="experienceboxtext">Aug 2021</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio hidden" id="notables">
         <div class="portfoliobg"><img src="images/backgroundsvgs/square1.svg"></div>
-        <h1 class="portfoliotitle">top <span style="color:#FFBDA2;">works</span></h1>
+        <h1 class="portfoliotitle">notables</h1>
         <h1 class="fadedportfoliotitle">est. 2005</h1>
         <div class="portfolio-container">
             <div class="portfolio1text hidden">
-                <h2 class="category">Linux & IoT</h2>
-                <h1 class="portfolioname">Home <span style="color:#95CFD5;">Assistant</span></h1>
-                <p class="subtitle">A home automation system that integrates every smart
-                    device in the house, including light switches, thermostats,
-                    garage door, and home energy sensors. Centralized
-                    control over every devices using the open-source Home
-                    Assistant project. I retrofitted the house by hand-building
-                    the thermostat, energy sensor, and garage door switch
-                    using wireless ESP-8266 microprocessor boards soldered
-                    onto various components, programmed with ESPHome to
-                    integrate natively with the Home Assistant API. And of
-                    course, I can automate tasks and devices according to
-                    the time of day and have one event influence another
-                    device; for example, using a vehicle location tracker, I am
-                    able to open the garage door automatically upon
-                    arriving home. Runs on an Ubuntu Server virtual machine
-                    on an old server pc from Free Geek volunteering.</p>
+                <h2 class="category">Awards</h2>
+                <h1 class="portfolioname">UBC Presidential Scholars <span style="color:#95CFD5;">Award Recipient</span>
+                </h1>
+                <p class="subtitle">University of British Columbia's most coveted entrance scholarship programme awarded
+                    to promising and accomplished high school students entering UBC engineering.
+
+                    <br><br>- C.K. Choi Scholarship in Engineering
+                </p>
             </div>
-            <div class="portfolio1image hidden"><img src="images/portfolio/ha.webp" alt="" loading="lazy"></div>
+            <div class="portfolio1image hidden"><img src="images/portfolio/ubc.webp" alt="" loading="lazy"></div>
         </div>
 
         <div class="portfolio-container hidden">
             <div class="portfolio2text hidden">
-                <h2 class="category">Electronics</h2>
-                <h1 class="portfolioname">Bluetooth <span style="color:#95CFD5;">Speaker</span></h1>
-                <p class="subtitle">A hand-built Bluetooth Speaker using a Bluetooth
-                    amplifier board and Dayton Audio woofers paired with
-                    some tweeters. Full stereo soundstage with strong low
-                    frequencies, and powered by lithium-ion cells that last
-                    pretty much forever.
-                    I had to build the speaker enclosure myself using MDF,
-                    and some box volume calculations to achieve the best
-                    acoustic properties. Overall, a challenging and timeconsuming project that makes up in sound quality
-                    and loudness.</p>
+                <h2 class="category">Awards</h2>
+                <h1 class="portfolioname">Air Force Association of Canada <span style="color:#95CFD5;">Medal</span></h1>
+                <p class="subtitle">A medal awarded to Private Pilot graduates of the Air Cadet program who demonstrate
+                    exemplary leadership, flight skills, and role model behaviour. There is only one recipient per
+                    training region.
+                </p>
             </div>
-            <div class="portfolio2image hidden"><img src="images/portfolio/speaker.webp" alt="" loading="lazy"></div>
+            <div class="portfolio2image hidden"><img src="images/portfolio/medal.jpg" alt="" loading="lazy"></div>
 
         </div>
 
