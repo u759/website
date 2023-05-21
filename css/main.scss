@@ -8,7 +8,7 @@
 :root {
     --orange: #FFBDA2;
     --blue: #95CFD5;
-  }
+}
 
 .hidden {
     opacity: 0;
@@ -105,6 +105,11 @@ body {
         overflow: hidden;
     }
 
+    :hover {
+        box-shadow: 0px 0px 20px 0px var(--blue);
+        transition: 0.5s;
+    }
+
     img[data-src] {
         opacity: 0;
     }
@@ -133,8 +138,8 @@ body {
     }
 }
 
-.experience{
-    
+.experience {
+    background-color: #141d25;
 }
 
 .transpire {
@@ -151,6 +156,7 @@ body {
     color: var(--orange);
     opacity: 0;
     font-size: 4vw;
+    font-weight: 500;
 }
 
 .centertitlemobile {
@@ -158,6 +164,8 @@ body {
     transform: translateY(1em);
     color: var(--orange);
     font-size: 6vw;
+    font-weight: 500;
+    opacity: 0.5;
 }
 
 
@@ -207,6 +215,30 @@ img {
     justify-content: left;
     position: fixed;
     z-index: 9999;
+}
+
+.hover-underline {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 32px);
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 16px;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 header {
@@ -472,7 +504,7 @@ header {
     }
 
     .centertitledesktop {
-        opacity: 1;
+        opacity: 0.5;
     }
 
     .centertitlemobile {
