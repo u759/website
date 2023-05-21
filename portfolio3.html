@@ -8,6 +8,7 @@
     <title>Ayden Nguyen</title>
     <link rel="stylesheet" href="css/main.css">
     <script defer src="index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -41,8 +42,23 @@
 
     <section class="portfolio hidden" id="portfolio">
         <div class="portfoliobg"><img src="images/backgroundsvgs/square1.svg"></div>
-        <h1 class="portfoliotitle">photo<span style="color:#FFBDA2;">graphy</span></h1>
-        <h1 class="fadedportfoliotitle">Nikon D90 | DJI Mini 2</h1>
+        <h1 class="portfoliotitle">photos</h1>
+        <h1 class="fadedportfoliotitle">Nikon | DJI</h1>
+        <p class="portfoliotypingarea"><span class="portfoliotyping"></span></p>
+        <script>
+            var typed = new Typed(".portfoliotyping", {
+                strings: ["<i>&lt;span&gt;Whether it was a person, a wall, or the famous steam clock in Gastown, I saw myself incessantly clicking the shutter button.&lt;/span&gt;</i>",
+                "<i>&lt;span&gt;When I got home, I would add another step: delete, delete, delete.&lt;/span&gt;</i>",
+                "<i>&lt;span&gt;Carrying a camera automatically makes you an outsider. But is the prospect of the unknown necessarily a bad thing?&lt;/span&gt;</i>"],
+                typeSpeed: 20,
+                backDelay: 7000,
+                fadeOut: true,
+                fadeOutClass: 'typed-fade-out',
+                fadeOutDelay: 500,
+                loop: true,
+                loopCount: Infinity,
+            })
+        </script>
         <div class="grid">
             <div class="portfolioboxes"><img data-src="images/portfolio/photography/sunset.webp" loading="lazy">
             </div>
