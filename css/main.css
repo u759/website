@@ -84,18 +84,6 @@ body {
   transition: 0.5s;
   color: white;
 }
-.grid :hover .portfolioboxtitle,
-.grid2 :hover .portfolioboxtitle {
-  opacity: 1;
-}
-.grid :hover .experienceboxtext,
-.grid2 :hover .experienceboxtext {
-  opacity: 1;
-}
-.grid :hover .experienceboxtitle,
-.grid2 :hover .experienceboxtitle {
-  opacity: 1;
-}
 .grid :hover img,
 .grid2 :hover img {
   transform: scale(103%);
@@ -109,6 +97,18 @@ body {
 .grid2 :hover {
   box-shadow: 0px 0px 20px 0px var(--blue);
   transition: 0.5s;
+}
+.grid :hover .portfolioboxtitle,
+.grid2 :hover .portfolioboxtitle {
+  opacity: 1;
+}
+.grid :hover .experienceboxtext,
+.grid2 :hover .experienceboxtext {
+  opacity: 1;
+}
+.grid :hover .experienceboxtitle,
+.grid2 :hover .experienceboxtitle {
+  opacity: 1;
 }
 .grid img[data-src],
 .grid2 img[data-src] {
@@ -367,6 +367,23 @@ header ul a {
   text-align: center;
   padding: 4em 2em;
 }
+.portfolio .portfoliotypingarea {
+  display: none;
+  position: absolute;
+  transform: translateY(-19vw);
+  left: 30vw;
+  font-size: 2.5vw;
+  opacity: 0.25;
+  padding-right: 2em;
+}
+.portfolio .portfolio1image {
+  border-radius: 2em;
+  overflow: hidden;
+}
+.portfolio .portfolio2image {
+  border-radius: 2em;
+  overflow: hidden;
+}
 .portfolio .category {
   color: var(--orange);
   line-height: 50%;
@@ -378,23 +395,6 @@ header ul a {
 }
 .portfolio .subtitle {
   padding-bottom: 1em;
-}
-.portfolio .portfolio1image {
-  border-radius: 2em;
-  overflow: hidden;
-}
-.portfolio .portfolio2image {
-  border-radius: 2em;
-  overflow: hidden;
-}
-.portfolio .portfoliotypingarea {
-  display: none;
-  position: absolute;
-  transform: translateY(-19vw);
-  left: 30vw;
-  font-size: 2.5vw;
-  opacity: 0.25;
-  padding-right: 2em;
 }
 
 @media only screen and (min-width: 800px) {

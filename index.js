@@ -18,4 +18,4 @@ hiddenElements.forEach((el) => observer.observe(el));
 	img.onload = function() {
 		img.removeAttribute('data-src');
 	};
-}); //please understand how this works
+});
