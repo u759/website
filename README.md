@@ -1,1 +1,1 @@
-This website was completed for the Career Life Education 12 Course at Burnaby North Secondary School. All code within this repository was all hand-typed without any third-party frameworks, apart from the typing animation that I obtained from a CDN as a JavaScript module.
+This website was completed for the Career Life Education 12 Course at Burnaby North Secondary School. All code within this repository was hand-typed without any third-party frameworks, apart from the typing animation that I obtained from a CDN as a JavaScript module.
