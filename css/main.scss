@@ -435,6 +435,10 @@ header {
     }
 }
 
+.englishlogo{
+    display: none;
+}
+
 @media only screen and (min-width: 800px) {
 
     .nav-container .navwide {
@@ -698,5 +702,8 @@ header {
         right: 1em;
     }
 
+    .englishlogo{
+        display: initial;
+    }
 
 }

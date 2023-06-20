@@ -397,6 +397,10 @@ header ul a {
   padding-bottom: 1em;
 }
 
+.englishlogo {
+  display: none;
+}
+
 @media only screen and (min-width: 800px) {
   .nav-container .navwide {
     display: initial;
@@ -606,5 +610,8 @@ header ul a {
     scale: 60%;
     transform: translateY(1.85em);
     right: 1em;
+  }
+  .englishlogo {
+    display: initial;
   }
 }/*# sourceMappingURL=main.css.map */
