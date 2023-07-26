@@ -39,6 +39,11 @@ body {
   color: lightgray;
 }
 
+.youtube {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
 .grid,
 .grid2 {
   display: grid;
@@ -419,6 +424,10 @@ header ul a {
   }
   .portfolio .portfoliotypingarea {
     display: initial;
+  }
+  .youtube {
+    aspect-ratio: 16/9;
+    width: 40vw;
   }
   .grid,
   .grid2 {

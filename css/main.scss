@@ -39,6 +39,11 @@ body {
     color: lightgray;
 }
 
+.youtube {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
 .grid,
 .grid2 {
     display: grid;
@@ -435,7 +440,7 @@ header {
     }
 }
 
-.englishlogo{
+.englishlogo {
     display: none;
 }
 
@@ -465,6 +470,11 @@ header {
 
         background-size: 22vw;
 
+    }
+
+    .youtube {
+        aspect-ratio: 16/9;
+        width: 40vw;
     }
 
     .grid,
@@ -702,7 +712,7 @@ header {
         right: 1em;
     }
 
-    .englishlogo{
+    .englishlogo {
         display: initial;
     }
 
