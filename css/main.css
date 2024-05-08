@@ -8,7 +8,7 @@
 
 :root {
   --orange: #FFBDA2;
-  --blue: #95CFD5;
+  --hover: #ffffff;
 }
 
 .hidden {
@@ -35,8 +35,11 @@ html {
 body {
   margin: 0;
   font-family: "Poppins", arial;
-  background-color: #191919;
+  background-color: #0f0f0f;
   color: lightgray;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.24) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position-y: -19px;
 }
 
 .youtube {
@@ -100,7 +103,7 @@ body {
 }
 .grid :hover,
 .grid2 :hover {
-  box-shadow: 0px 0px 20px 0px var(--blue);
+  box-shadow: 0px 0px 20px 0px var(--hover);
   transition: 0.5s;
 }
 .grid :hover .portfolioboxtitle,
@@ -138,10 +141,6 @@ body {
 .grid2 > div :hover {
   filter: brightness(20%);
   transition: 0.5s;
-}
-
-.experience {
-  background-color: #0e141c;
 }
 
 .transpire {
@@ -287,6 +286,7 @@ header ul a {
 .about {
   background-image: url(/images/backgroundsvgs/heroblob.svg);
   background-size: cover;
+  background-position: bottom;
 }
 .about .aboutsection {
   padding: 4em 2em;
@@ -413,9 +413,6 @@ header ul a {
   .about .left {
     text-align: left;
   }
-  .portfolio {
-    background-size: 22vw;
-  }
   .portfolio .portfoliotitle {
     font-size: 4vw;
   }
@@ -526,7 +523,7 @@ header ul a {
     z-index: 999;
   }
   .about .aboutsection .text {
-    transform: translateY(-5vw);
+    transform: translateY(-7vw);
     text-align: left;
     font-size: 1.3vw;
     line-height: 200%;
